@@ -2,11 +2,21 @@
   "name": "gexplore-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.cjs",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsup src"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "eslint": "^8.49.0",
+    "tsup": "^7.2.0",
+    "tsx": "^3.12.9",
+    "typescript": "^5.2.2"
+  }
 }
