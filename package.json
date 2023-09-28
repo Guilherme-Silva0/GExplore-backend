@@ -2,15 +2,15 @@
   "name": "gexplore-backend",
   "version": "1.0.0",
   "description": "",
-  "main": "src/server.ts",
+  "main": "src/index.ts",
   "type": "module",
   "scripts": {
-    "start": "node dist/server.cjs",
-    "dev": "tsx watch src/server.ts",
+    "start": "node dist/index.cjs",
+    "dev": "tsx watch src/index.ts",
     "build": "tsup src"
   },
   "keywords": [],
-  "author": "",
+  "author": "Guilherme silva",
   "license": "ISC",
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.1.0",
