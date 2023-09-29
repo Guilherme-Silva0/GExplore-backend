@@ -4,13 +4,13 @@ import { User } from '../../core/user/model/User'
 
 export class RegisterUserController {
   constructor(
-    readonly server: ServerType,
-    readonly useCase: RegisterUser,
+    private readonly server: ServerType,
+    private readonly useCase: RegisterUser,
   ) {
-    server.post('/user', async ({ body }, reply) => {
+    this.server.post('/auth/register', async ({ body }, reply) => {
       const { name, email, password } = body as User
 
-      const user = await useCase.execute({
+      const user = await this.useCase.execute({
         name,
         email,
         password,
